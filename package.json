@@ -3,8 +3,9 @@
         "test": "node --max-old-space-size=4096 src/js/test \"src/js/hashmaps/**/index.js\" \"testcases/*.json\""
     },
     "devDependencies": {
-        "hashtable": "^2.0.2",
+        "glob": "7.1.2",
         "hashmap": "2.3.0",
-        "glob": "7.1.2"
+        "hashtable": "^2.0.2",
+        "vbase": "0.0.1"
     }
 }
