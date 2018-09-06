@@ -6,6 +6,6 @@
         "glob": "7.1.2",
         "hashmap": "2.3.0",
         "hashtable": "^2.0.2",
-        "vbase": "0.0.1"
+        "vbase": "latest"
     }
 }
