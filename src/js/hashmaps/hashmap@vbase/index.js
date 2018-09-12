@@ -1,10 +1,12 @@
 const { HashMap } = require('vbase/node/containers/HashMap');
 
+const M_LOG2 = Math.log(2);
+
 module.exports = class extends HashMap {
     constructor() {
         super(([hi, lo]) => {
             const n = this._capacity;
-            const h = (hi ^ lo) % n;
+            const h = (hi ^ lo) & (n - 1);
             return h < 0 ? h + n : h;
         }, (lhs, rhs) => {
             return lhs[0] === rhs[0] && lhs[1] === rhs[1];
@@ -13,6 +15,6 @@ module.exports = class extends HashMap {
     }
 
     reserve(size) {
-        this._capacity = size * 2;
+        this._capacity = (1 << Math.ceil(Math.log(size)/M_LOG2)) >>> 0;
     }
 };
