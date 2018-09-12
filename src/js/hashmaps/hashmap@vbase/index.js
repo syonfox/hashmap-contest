@@ -15,6 +15,6 @@ module.exports = class extends HashMap {
     }
 
     reserve(size) {
-        this._capacity = (1 << Math.ceil(Math.log(size)/M_LOG2)) >>> 0;
+        this._capacity = (1 << Math.ceil(Math.log(size) / M_LOG2)) >>> 0;
     }
 };
