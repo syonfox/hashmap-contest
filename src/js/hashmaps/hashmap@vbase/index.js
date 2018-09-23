@@ -1,6 +1,5 @@
-const { HashMap } = require('vbase/node/containers/HashMap');
-
-const M_LOG2 = Math.log(2);
+const { HashMap } = require('vbase/stage/node/containers/HashMap');
+const { M_LOG2 } = require('vbase/stage/node/math/constants');
 
 module.exports = class extends HashMap {
     constructor() {
